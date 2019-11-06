@@ -21,14 +21,13 @@ public class MainActivity extends AppCompatActivity {
 
         int numero = pergunta;
 
-    //    int respo = resposta;
 
         if (num == 1){
-            tvSwipe.setText("Você é Homem");
+            tvSwipe.setText("Você é Homem?");
             if (resS == 1){
                 tvSwipe.setText("SIM");
                 resN = resN + 1;
-                RespostasCertas = 1;
+                RespostasCertas = RespostasCertas +1;
             }else if(resN == 1){
                 tvSwipe.setText("NÂO");
                 resS = resS + 1;
@@ -36,23 +35,23 @@ public class MainActivity extends AppCompatActivity {
 
         }
         if (num == 2){
-            tvSwipe.setText("Você é Mulher");
+            tvSwipe.setText("Você é Mulher?");
             if (resS == 2){
                 tvSwipe.setText("SIM");
                 resN = resN + 1;
             }else if(resN == 2){
                 tvSwipe.setText("NÂO");
                 resS = resS + 1;
-                RespostasCertas = 2;
+                RespostasCertas = RespostasCertas +1;
             }
 
         }
         if (num == 3){
-            tvSwipe.setText("Tem Mais de 20 Anos");
+            tvSwipe.setText("Tem Mais de 20 Anos?");
             if (resS == 3){
                 tvSwipe.setText("SIM");
                 resN = resN + 1;
-                RespostasCertas = 3;
+                RespostasCertas = RespostasCertas +1;
             }else if(resN == 3){
                 tvSwipe.setText("NÂO");
                 resS = resS + 1;
@@ -60,40 +59,62 @@ public class MainActivity extends AppCompatActivity {
 
         }
         if (num == 4){
-            tvSwipe.setText("Stevem é MachoPaCaralho");
+            tvSwipe.setText("Você tem um colega chamado Stevem?");
             if (resS == 4){
                 tvSwipe.setText("SIM");
-            //    resN = resN + 1;
+                resN = resN + 1;
             }else if(resN == 4){
                 tvSwipe.setText("NÂO");
-            //    resS = resS + 1;
-                RespostasCertas = 4;
+                resS = resS + 1;
+                RespostasCertas = RespostasCertas +1;
             }
         }
         if (num == 5){
-            tvSwipe.setText("Você tem Moto");
+            tvSwipe.setText("Você tem Moto?");
+
             if (resS == 5){
                 tvSwipe.setText("SIM");
                 resN = resN + 1;
-                RespostasCertas = 5;
+                RespostasCertas = RespostasCertas +1;
             }else if(resN == 5){
                 tvSwipe.setText("NÂO");
                 resS = resS + 1;
             }
         }
+        if (num == 6){
+            tvSwipe.setText("Você tem Moto XJ?");
 
-        if (resN > 5 || resS > 5){
+            if (resS == 6){
+                tvSwipe.setText("SIM");
+                resN = resN + 1;
+                RespostasCertas = RespostasCertas +1;
+            }else if(resN == 6){
+                tvSwipe.setText("NÂO");
+                resS = resS + 1;
+            }
+
+        }
+        if (num == 7){
+            String Respostas = String.valueOf(RespostasCertas);
+            tvSwipe.setText("Você acertou: *"+Respostas+"* de 6 Perguntas");
+        }
+
+        if (resN > 6 || resS > 6){
             resS = 0;
             resN = 0;
+            RespostasCertas = 0;
         }
-        if (num >= 5){
+        if (num >= 7){
+
             num = 0;
         }
         if (num == -1){
-            num = 5;
+            num = 6;
         }
 
+
         return numero;
+
 
     };
 
