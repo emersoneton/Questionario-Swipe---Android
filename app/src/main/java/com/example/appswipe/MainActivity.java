@@ -4,16 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private ConstraintLayout tela;
     private TextView tvSwipe;
+    private TextView tvNumero;
+    private Button btnReinicia;
     int num = 0;
     int resS = 0;
     int resN = 0;
     int RespostasCertas = 0;
+
 
 
 
@@ -23,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (num == 1){
+            tvNumero.setText("Pergunta. 1");
             tvSwipe.setText("Você é Homem?");
             if (resS == 1){
                 tvSwipe.setText("SIM");
@@ -35,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         if (num == 2){
+            tvNumero.setText("Pergunta. 2");
             tvSwipe.setText("Você é Mulher?");
             if (resS == 2){
                 tvSwipe.setText("SIM");
@@ -47,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         if (num == 3){
+            tvNumero.setText("Pergunta. 3");
             tvSwipe.setText("Tem Mais de 20 Anos?");
             if (resS == 3){
                 tvSwipe.setText("SIM");
@@ -59,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         if (num == 4){
+            tvNumero.setText("Pergunta. 4");
             tvSwipe.setText("Você tem um colega chamado Stevem?");
             if (resS == 4){
                 tvSwipe.setText("SIM");
@@ -70,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if (num == 5){
+            tvNumero.setText("Pergunta. 5");
             tvSwipe.setText("Você tem Moto?");
 
             if (resS == 5){
@@ -82,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if (num == 6){
+            tvNumero.setText("Pergunta. 6");
             tvSwipe.setText("Você tem Moto XJ?");
 
             if (resS == 6){
@@ -94,9 +106,30 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
+
         if (num == 7){
-            String Respostas = String.valueOf(RespostasCertas);
-            tvSwipe.setText("Você acertou: *"+Respostas+"* de 6 Perguntas");
+            tvNumero.setText("RESPOSTAS");
+            if (RespostasCertas <=2 ){
+                String Respostas = String.valueOf(RespostasCertas);
+                tvSwipe.setText("Você acertou: *"+Respostas+"* de 6 Perguntas - Você pode melhorar!");
+            }
+            if (RespostasCertas == 3 ){
+                String Respostas = String.valueOf(RespostasCertas);
+                tvSwipe.setText("Você acertou: *"+Respostas+"* de 6 Perguntas - Foi Razoavelmente BEM!");
+            }
+            if (RespostasCertas == 4 ){
+                String Respostas = String.valueOf(RespostasCertas);
+                tvSwipe.setText("Você acertou: *"+Respostas+"* de 6 Perguntas - Esta BOM!");
+            }
+            if (RespostasCertas == 5 ){
+                String Respostas = String.valueOf(RespostasCertas);
+                tvSwipe.setText("Você acertou: *"+Respostas+"* de 6 Perguntas - Excelente Quase Gabaritou!");
+            }
+            if (RespostasCertas > 5 ){
+                String Respostas = String.valueOf(RespostasCertas);
+                tvSwipe.setText("Você acertou: *"+Respostas+"* de 6 Perguntas - Excelente *PARABÉNS*");
+            }
+            btnReinicia.setVisibility(View.VISIBLE);
         }
 
         if (resN > 6 || resS > 6){
@@ -112,7 +145,6 @@ public class MainActivity extends AppCompatActivity {
             num = 6;
         }
 
-
         return numero;
 
 
@@ -125,6 +157,9 @@ public class MainActivity extends AppCompatActivity {
 
         tvSwipe = findViewById(R.id.tvSwipe);
         tela = findViewById(R.id.tela);
+        tvNumero = findViewById(R.id.tvNumero);
+        btnReinicia = findViewById(R.id.btnReinicia);
+
 
 
 
