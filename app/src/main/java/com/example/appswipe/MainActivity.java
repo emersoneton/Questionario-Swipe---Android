@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (num == 1){
             tvRespondida.setText("");
-            tvNumero.setText("Pergunta. 1");
-            tvSwipe.setText("Você é Homem?");
+            tvNumero.setText("Pergunta. 1 - Descobrimento do Brasil");
+            tvSwipe.setText("Brasil foi descoberto em 1500 por Pedro Alvares Cabral?");
             if (pergunta1 == true && valida == true){
                 tvRespondida.setText("RESPONDIDA");
             }
@@ -73,12 +73,11 @@ public class MainActivity extends AppCompatActivity {
                 pergunta1 = true;
             }
 
-
         }
         if (num == 2){
             tvRespondida.setText("");
-            tvNumero.setText("Pergunta. 2");
-            tvSwipe.setText("Você é Mulher?");
+            tvNumero.setText("Pergunta. 2 - 1º Guerra Muncial");
+            tvSwipe.setText("Foi uma guerra global centrada na Africa no ano de 1914 á 1918");
             if (pergunta2 == true && valida == true){
                 tvRespondida.setText("RESPONDIDA");
             }
@@ -94,8 +93,8 @@ public class MainActivity extends AppCompatActivity {
         }
         if (num == 3){
             tvRespondida.setText("");
-            tvNumero.setText("Pergunta. 3");
-            tvSwipe.setText("Tem Mais de 20 Anos?");
+            tvNumero.setText("Pergunta. 3 - 1º Guerra Muncial");
+            tvSwipe.setText("Foi uma guerra global centrada na Europa no ano de 1914 á 1918");
             if (pergunta3 == true && valida == true){
                 tvRespondida.setText("RESPONDIDA");
             }
@@ -111,8 +110,8 @@ public class MainActivity extends AppCompatActivity {
         }
         if (num == 4){
             tvRespondida.setText("");
-            tvNumero.setText("Pergunta. 4");
-            tvSwipe.setText("Você tem um colega chamado Stevem?");
+            tvNumero.setText("Pergunta. 4 - 2º Guerra Muncial");
+            tvSwipe.setText("Foi um conflito militar global que durou de 1939 a 1947");
             if (pergunta4 == true && valida == true){
                 tvRespondida.setText("RESPONDIDA");
             }
@@ -127,8 +126,8 @@ public class MainActivity extends AppCompatActivity {
         }
         if (num == 5){
             tvRespondida.setText("");
-            tvNumero.setText("Pergunta. 5");
-            tvSwipe.setText("Você tem Moto?");
+            tvNumero.setText("Pergunta. 5 - Guerra do Golfo");
+            tvSwipe.setText("Teve duração 2 de agosto de 1990 até 28 de fevereiro de 1991");
             if (pergunta5 == true && valida == true){
                 tvRespondida.setText("RESPONDIDA");
             }
@@ -143,8 +142,8 @@ public class MainActivity extends AppCompatActivity {
         }
         if (num == 6){
             tvRespondida.setText("");
-            tvNumero.setText("Pergunta. 6");
-            tvSwipe.setText("Você tem Moto XJ?");
+            tvNumero.setText("Pergunta. 6 - Guerra Fria");
+            tvSwipe.setText("É a designação atribuída ao período histórico de disputas estratégicas e conflitos indiretos entre os Estados Unidos e a União Soviética - Período: 1947 – 1991");
             if (pergunta6 == true && valida == true){
                 tvRespondida.setText("RESPONDIDA");
             }

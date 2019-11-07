@@ -9,15 +9,17 @@
 
     <TextView
         android:id="@+id/tvSwipe"
-        android:layout_width="325dp"
-        android:layout_height="247dp"
+        android:layout_width="336dp"
+        android:layout_height="366dp"
         android:text="Perguntas e Respostas!"
         android:textAlignment="center"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
 
     <Button
         android:id="@+id/btnReinicia"
@@ -31,22 +33,22 @@
         app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSwipe"
-        app:layout_constraintVertical_bias="0.79" />
+        app:layout_constraintVertical_bias="0.73" />
 
     <TextView
         android:id="@+id/tvNumero"
-        android:layout_width="162dp"
-        android:layout_height="27dp"
+        android:layout_width="340dp"
+        android:layout_height="36dp"
         android:gravity="right"
         android:text=""
         android:textColor="#ff0000"
-        android:textSize="20dp"
+        android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/tvSwipe"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.561" />
 
     <TextView
         android:id="@+id/tvRespondida"
@@ -57,8 +59,9 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSwipe"
-        app:layout_constraintVertical_bias="0.233" />
+        app:layout_constraintVertical_bias="0.119" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
