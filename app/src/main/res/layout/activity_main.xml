@@ -11,7 +11,7 @@
         android:id="@+id/tvSwipe"
         android:layout_width="325dp"
         android:layout_height="247dp"
-        android:text="Peruntas e Respostas!"
+        android:text="Perguntas e Respostas!"
         android:textAlignment="center"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,14 +23,15 @@
         android:id="@+id/btnReinicia"
         android:layout_width="117dp"
         android:layout_height="42dp"
+        android:onClick="reinicia"
         android:text="REINICIA"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSwipe"
-        app:layout_constraintVertical_bias="0.52" />
+        app:layout_constraintVertical_bias="0.79" />
 
     <TextView
         android:id="@+id/tvNumero"
@@ -46,5 +47,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.13" />
+
+    <TextView
+        android:id="@+id/tvRespondida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#ff0000"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSwipe"
+        app:layout_constraintVertical_bias="0.233" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
