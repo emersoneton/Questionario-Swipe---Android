@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/tela"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:backgroundTint="#CAC8C8"
+    android:background="#000">
 
     <TextView
         android:id="@+id/tvSwipe"
         android:layout_width="336dp"
         android:layout_height="366dp"
-        android:text="Perguntas e Respostas!"
+        android:text="\n\nPerguntas e Respostas!\n\nCima para Baixo = SIM\n Baixo para Cima = NÃO"
         android:textAlignment="center"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,11 +59,13 @@
         android:text=""
         android:textColor="#ff0000"
         android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSwipe"
         app:layout_constraintVertical_bias="0.119" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

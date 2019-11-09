@@ -8,8 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.os.Bundle;
+import android.os.Handler;
 
 public class MainActivity extends AppCompatActivity {
+
+
 
     private ConstraintLayout tela;
     private TextView tvSwipe;
@@ -29,11 +33,9 @@ public class MainActivity extends AppCompatActivity {
     boolean pergunta6 = false;
 
 
-
-
     public void reinicia(View view){
         tvRespondida.setText("");
-        tvSwipe.setText("Perguntas e Respostas!");
+        tvSwipe.setText("\n\nPerguntas e Respostas!\n\nCima para Baixo = SIM\n Baixo para Cima = NÃO");
         tvNumero.setText("");
         respostas = 3;
         num = 0;
@@ -50,12 +52,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     private int perguntas(int pergunta){
         btnReinicia.setVisibility(View.INVISIBLE);
         int numero = pergunta;
-
 
         if (num == 1){
             tvRespondida.setText("");
@@ -66,14 +65,14 @@ public class MainActivity extends AppCompatActivity {
             }
             if (respostas == 1){
                 tvSwipe.setText("SIM");
-                RespostasCertas = RespostasCertas +1;
+                if (respostas == 1 && valida != true) RespostasCertas = RespostasCertas +1;
                 pergunta1 = true;
             }else if(respostas == 0){
-                tvSwipe.setText("NÂO");
+                tvSwipe.setText("NÃO");
                 pergunta1 = true;
             }
-
         }
+
         if (num == 2){
             tvRespondida.setText("");
             tvNumero.setText("Pergunta. 2 - 1º Guerra Muncial");
@@ -85,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
                 tvSwipe.setText("SIM");
                 pergunta2 = true;
             }else if(respostas == 0){
-                tvSwipe.setText("NÂO");
-                RespostasCertas = RespostasCertas +1;
+                tvSwipe.setText("NÃO");
+                if (respostas == 0 && valida != true) RespostasCertas = RespostasCertas +1;
                 pergunta2 = true;
             }
 
@@ -100,10 +99,10 @@ public class MainActivity extends AppCompatActivity {
             }
             if (respostas == 1){
                 tvSwipe.setText("SIM");
-                RespostasCertas = RespostasCertas +1;
+                if (respostas == 1 && valida != true) RespostasCertas = RespostasCertas +1;
                 pergunta3 = true;
             }else if(respostas == 0){
-                tvSwipe.setText("NÂO");
+                tvSwipe.setText("NÃO");
                 pergunta3 = true;
             }
 
@@ -119,8 +118,8 @@ public class MainActivity extends AppCompatActivity {
                 tvSwipe.setText("SIM");
                 pergunta4 = true;
             }else if(respostas == 0){
-                tvSwipe.setText("NÂO");
-                RespostasCertas = RespostasCertas +1;
+                tvSwipe.setText("NÃO");
+                if (respostas == 0 && valida != true) RespostasCertas = RespostasCertas +1;
                 pergunta4 = true;
             }
         }
@@ -133,10 +132,10 @@ public class MainActivity extends AppCompatActivity {
             }
             if (respostas == 1){
                 tvSwipe.setText("SIM");
-                RespostasCertas = RespostasCertas +1;
+                if (respostas == 1 && valida != true) RespostasCertas = RespostasCertas +1;
                 pergunta5 = true;
             }else if(respostas == 0){
-                tvSwipe.setText("NÂO");
+                tvSwipe.setText("NÃO");
                 pergunta5 = true;
             }
         }
@@ -149,15 +148,14 @@ public class MainActivity extends AppCompatActivity {
             }
             if (respostas == 1){
                 tvSwipe.setText("SIM");
-                RespostasCertas = RespostasCertas +1;
+                if (respostas == 1 && valida != true) RespostasCertas = RespostasCertas +1;
                 pergunta6 = true;
             }else if(respostas == 0){
-                tvSwipe.setText("NÂO");
+                tvSwipe.setText("NÃO");
                 pergunta6 = true;
             }
 
         }
-
         if (num == 7){
             tvRespondida.setText("");
             tvNumero.setText("RESPOSTAS");
@@ -198,8 +196,8 @@ public class MainActivity extends AppCompatActivity {
         respostas = 3;
         return numero;
 
+    }
 
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -214,10 +212,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
         tela.setOnTouchListener(new OnSwipeTouchListener(this){
             @Override
             public void onSwipeBottom() {
@@ -225,6 +219,8 @@ public class MainActivity extends AppCompatActivity {
               //  tvSwipe.setText("Para Baixo!");
                 respostas = 1;
                 perguntas( respostas );
+                num = num + 1;
+                perguntas( num );
             }
 
 
@@ -234,6 +230,8 @@ public class MainActivity extends AppCompatActivity {
                // tvSwipe.setText("Para Cima!");
                 respostas = 0;
                 perguntas( respostas );
+                num = num + 1;
+                perguntas( num );
             }
 
             @Override
@@ -253,9 +251,5 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
     }
-
-
-
 }
